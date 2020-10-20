@@ -14,7 +14,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   TextEditingController _SomeController = TextEditingController();
   var textchange = "My Name";
-  var url = "https://jsonplaceholder.typicode.com/photos";
+  var url = "https://teqbot.in/wp-json/wp/v2/posts";
   var data;
   @override
   void initState() {
@@ -43,9 +43,9 @@ class _HomePageState extends State<HomePage> {
                   return Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: ListTile(
-                      title: Text(data[index]["title"]),
-                      leading: Image.network(data[index]["url"]),
-                      subtitle: Text("ID : ${data[index]["id"]}"),
+                      title: Text(data[index]["title"]["rendered"]),
+                      // leading: Image.network(data[index]["url"]),
+                      // subtitle: Text("ID : ${data[index]["id"]}"),
                     ),
                   );
                 },
