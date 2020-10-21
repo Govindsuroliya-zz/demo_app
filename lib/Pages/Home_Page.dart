@@ -1,3 +1,4 @@
+import 'package:demo_app/Ulitis/Constants.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:demo_app/AppDrawer.dart';
@@ -34,6 +35,10 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Govind Suroliya"),
+        actions: [IconButton(color: Colors.white,icon: Icon(Icons.logout), onPressed: () {
+          Constants.prefs.setBool("LoggedIn",false);
+          Navigator.pushReplacementNamed(context, "/login");
+        })],
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -56,14 +61,6 @@ class _HomePageState extends State<HomePage> {
               ),
       ),
       drawer: MyDrawer(),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          textchange = _SomeController.text;
-          setState(() {});
-        },
-        child: Icon(Icons.refresh),
-      ),
     );
   }
 }

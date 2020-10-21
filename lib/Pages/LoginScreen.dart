@@ -1,3 +1,4 @@
+import 'package:demo_app/Ulitis/Constants.dart';
 import 'package:flutter/material.dart';
 import 'package:demo_app/BackImage.dart';
 
@@ -64,7 +65,9 @@ class _LoginPageState extends State<LoginPage> {
                               //     context,
                               //     MaterialPageRoute(
                               //         builder: (context) => HomePage()));
-                              Navigator.pushNamed(context, "/home");
+                              Constants.prefs.setBool("LoggedIn", true);
+                              Navigator.pushReplacementNamed(context, "/home");
+
                             },
                             color: Colors.orange,
                             textColor: Colors.white,
