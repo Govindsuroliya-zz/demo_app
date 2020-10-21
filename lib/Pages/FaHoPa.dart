@@ -6,17 +6,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 // import 'package:http/http.dart' as http;
 
-class HomePageFB extends StatefulWidget {
-  const HomePageFB({Key key}) : super(key: key);
-
-  @override
-  _HomePageFBState createState() => _HomePageFBState();
-}
-
-class _HomePageFBState extends State<HomePageFB> {
-  var textchange = "My Name";
-
-
+class HomePageFB extends StatelessWidget {
  Future getData() async {
     var url = "https://teqbot.in/wp-json/wp/v2/posts";
     var res = await http.get(url);
