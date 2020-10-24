@@ -1,3 +1,7 @@
+<<<<<<< Updated upstream
+=======
+import 'package:demo_app/Pages/Home_Page.dart';
+>>>>>>> Stashed changes
 import 'package:flutter/material.dart';
 import 'package:demo_app/BackImage.dart';
 
@@ -17,7 +21,11 @@ class _LoginPageState extends State<LoginPage> {
         body: Stack(
       fit: StackFit.expand,
       children: [
+<<<<<<< Updated upstream
         Baim(),
+=======
+        baim(),
+>>>>>>> Stashed changes
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Center(
@@ -39,6 +47,10 @@ class _LoginPageState extends State<LoginPage> {
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: TextFormField(
+<<<<<<< Updated upstream
+=======
+                            controller: userNameControllor,
+>>>>>>> Stashed changes
                             decoration: InputDecoration(
                                 fillColor: Colors.white,
                                 focusColor: Colors.white,
@@ -60,11 +72,18 @@ class _LoginPageState extends State<LoginPage> {
                           padding: const EdgeInsets.all(8.0),
                           child: RaisedButton(
                             onPressed: () {
+<<<<<<< Updated upstream
                               // Navigator.push(
                               //     context,
                               //     MaterialPageRoute(
                               //         builder: (context) => HomePage()));
                               Navigator.pushNamed(context, "/home");
+=======
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => HomePage()));
+>>>>>>> Stashed changes
                             },
                             color: Colors.orange,
                             textColor: Colors.white,
